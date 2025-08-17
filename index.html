@@ -1,27 +1,70 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mein Portfolio</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script defer src="assets/js/theme.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Hi, ich bin {{Dein Name}}</h1>
-    <p>Entwickler · Open Source · Linux</p>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <h1>Patrick Renges</h1>
+        <p>Entwickler · Open Source · Linux</p>
+      </div>
+      <button id="themeToggle" class="btn" aria-label="Dark Mode umschalten">Dark Mode</button>
+    </div>
   </header>
-  <main>
+
+  <main class="container">
     <section>
+      <h2>Über mich</h2>
+      <p>
+        Ich baue saubere, zugängliche Web-UIs und liebe FOSS. 
+        Hier ist eine Auswahl meiner Projekte.
+      </p>
+    </section>
+
+    <section class="projects">
       <h2>Projekte</h2>
-      <ul>
-        <li><a href="#">Projekt 1</a> – Kurzbeschreibung</li>
-        <li><a href="#">Projekt 2</a> – Kurzbeschreibung</li>
-      </ul>
+      <div class="grid">
+        <article class="card">
+          <h3>Projekt Alpha</h3>
+          <p>Kompaktes Tool für X. Geschrieben in TypeScript.</p>
+          <div class="tags"><span>TypeScript</span><span>Vite</span></div>
+          <div class="actions">
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Live</a>
+            <a class="btn btn-ghost" href="#" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Projekt Beta</h3>
+          <p>API-Client mit Fokus auf DX und Tests.</p>
+          <div class="tags"><span>Node.js</span><span>Jest</span></div>
+          <div class="actions">
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Live</a>
+            <a class="btn btn-ghost" href="#" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Projekt Gamma</h3>
+          <p>Minimal-Blog mit Markdown und SSG.</p>
+          <div class="tags"><span>Astro</span><span>Markdown</span></div>
+          <div class="actions">
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Live</a>
+            <a class="btn btn-ghost" href="#" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
-  <footer>
-    <small>© <span id="y"></span> {{Dein Name}}</small>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="y"></span> Patrick Renges</small>
+    </div>
     <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
   </footer>
 </body>
